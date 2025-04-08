@@ -1,9 +1,6 @@
 # без неявного импорта не срабатывала команда запуска тестов pytest -v
 import sys, os
-print(f"test_ingredient.py __file__ = {__file__}")
-print(f"test_ingredient.py sys.path BEFORE: {sys.path}")
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))  # Добавляем родительский каталог
-print(f"test_ingredient.py sys.path AFTER: {sys.path}")
 
 import pytest
 from unittest.mock import Mock
